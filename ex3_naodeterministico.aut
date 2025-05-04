@@ -1,0 +1,10 @@
+{
+  "initial": 0,
+  "final": [2],
+  "transitions": [
+    { "from": 0, "read": null, "to": 1 },
+    { "from": 1, "read": "a", "to": 1 },
+    { "from": 1, "read": "b", "to": 2 },
+    { "from": 0, "read": "b", "to": 2 }
+  ]
+}
