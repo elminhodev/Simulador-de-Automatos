@@ -76,7 +76,7 @@ Exemplo:
 
 Se estado = "q0" e "q0" tem uma transição ε para "q1", e "q1" para "q2", a função retornará {"q0", "q1", "q2"}.
 
-## 3. 3. Função simular_automato
+## 3. Função simular_automato
 
 ```
 def simular_automato(inicial, finais, transicoes, palavra):
