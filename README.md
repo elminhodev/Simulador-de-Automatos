@@ -1,3 +1,62 @@
+# 🧮 Simulador de Máquina de Turing
+
+Este projeto implementa um **simulador de Máquina de Turing** em Python (testado no Google Colab).  
+Ele recebe uma especificação da máquina em **JSON** e um arquivo de entrada da fita em **TXT**,  
+e retorna se a entrada é aceita ou rejeitada, além de salvar a fita final em um arquivo de saída.
+
+---
+
+## 📌 Funcionalidades
+- Lê a definição da máquina a partir de um arquivo `.json`;
+- Lê a entrada da fita de um arquivo `.in` (ou `.txt`);
+- Executa passo a passo a Máquina de Turing;
+- Mostra no console:
+  - `1` → se aceitou
+  - `0` → se rejeitou
+- Salva a fita final em um arquivo `.txt`.
+
+---
+
+## 🚀 Como usar no Google Colab
+
+### 1. Carregar o simulador
+Abra uma célula no Colab, cole o código do simulador e execute para carregar a função `run_tm`.
+
+### 2. Subir os arquivos
+No menu lateral do Colab (ícone 📂), clique em **Upload** e envie:
+- `duplo_bal.json` (especificação da MT)
+- `duplobal.in` (entrada da fita)
+
+Eles ficarão disponíveis em `/content/`.
+
+### 3. Executar a máquina
+Rode o comando:
+
+```python
+run_tm("/content/duplo_bal.json", "/content/duplobal.in", "/content/saida.txt")
+Imprime 1 (aceita) ou 0 (rejeita).
+
+Gera o arquivo saida.txt com a fita final.
+
+4. Conferir a saída
+Para ver o conteúdo da fita final:
+
+python
+Copiar código
+with open("/content/saida.txt") as f:
+    print(f.read())
+5. Usar outros arquivos de entrada
+Se tiver outros arquivos .in, basta subir no Colab e rodar novamente:
+
+python
+Copiar código
+run_tm("/content/duplo_bal.json", "/content/duplobal2.in", "/content/saida2.txt")
+Confira os arquivos disponíveis com:
+
+bash
+Copiar código
+!ls /content
+
 # 🧮 Simulador de Autômatos Finitos
 
 Este repositório contém uma ferramenta desenvolvida em Python para simulação de **autômatos finitos determinísticos (AFD)** e **não determinísticos (AFND)**, com suporte a transições vazias (ε). O projeto foi implementado em um notebook Jupyter (Google Colab) e utiliza arquivos de entrada `.aut` (definição do autômato) e `.in` (palavras a serem testadas).
